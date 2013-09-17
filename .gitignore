@@ -1,3 +1,6 @@
+# built ADT directory
+.metadata/
+
 # built application files
 *.apk
 *.ap_
