@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+D:\GitHub\Android\Beginning Android™ 4 Application Development\.metadata\.plugins\org.eclipse.jdt.core
