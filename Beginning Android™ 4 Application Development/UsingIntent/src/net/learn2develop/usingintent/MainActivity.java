@@ -5,9 +5,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
-
+	
+	int request_Code = 1;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -15,7 +18,20 @@ public class MainActivity extends Activity {
 	}
 
 	public void onClick(View view){
-		startActivity(new Intent("net.learn2develop.SecondActivity"));
+		//startActivity(new Intent("net.learn2develop.SecondActivity"));
+		startActivityForResult(new Intent("net.learn2develop.SecondActivity"), request_Code);
+	}
+	
+	
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		if(requestCode == request_Code){
+			if(resultCode == RESULT_OK){
+				Toast.makeText(this.getBaseContext(), data.getData().toString(), Toast.LENGTH_SHORT).show();
+			}
+		}
 	}
 
 	@Override

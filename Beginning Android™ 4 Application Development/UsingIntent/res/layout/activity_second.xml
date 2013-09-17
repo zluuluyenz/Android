@@ -9,12 +9,27 @@
     tools:context=".SecondActivity" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/secondactivity_name" 
-        android:textSize="20sp"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Please enter your name" />
+    
+    <EditText 
+        android:id="@+id/txt_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1" />
+    
+    <Button 
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:onClick="onClick"
+        android:layout_below="@+id/txt_username"
+        android:layout_alignLeft="@+id/txt_username"/>
 
 </RelativeLayout>
